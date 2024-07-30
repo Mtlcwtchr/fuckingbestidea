@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace Core.Utilities
@@ -81,6 +82,8 @@ namespace Core.Utilities
             }
         }
         
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static float Bernstein(int n, int i, float t)
         {
             float t_i = Mathf.Pow(t, i);
@@ -90,6 +93,7 @@ namespace Core.Utilities
             return basis;
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static float Binomial(int n, int i)
         {
             float ni;
